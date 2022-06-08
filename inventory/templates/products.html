@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:powderblue;">
+<h3 style="text-align:center;"><u>productlist</u></h3>
+<br><br>
+<table style="padding-left:300px;">
+    <tr>
+    <th style="padding-left:20px;" >Product_id</th>
+    <th style="padding-left:20px;">Product_name</th>
+    <th style="padding-left:20px;">Product_category</th>
+    <th style="padding-left:20px;">Product_warehouse</th>
+        <th style="padding-left:20px;">Product_amount</th>
+    <th style="padding-left:20px;">Product_quantity</th>
+  </tr>
+    {% for i in products %}
+  <tr>
+    <td style="text-align:center;">{{i.id}}</td>
+    <td style="text-align:center;">{{i.name}}</td>
+    <td style="text-align:center;">{{i.category}}</td>
+      <td style="text-align:center;">{{i.warehouse}}</td>
+      <td style="text-align:center;">{{i.amount}}</td>
+      <td style="text-align:center;">{{i.stock}}</td>
+  </tr>
+    {% endfor %}
+
+</table>
+<br><br>
+    <p style="text-align:center;"><a  href="{% url 'home' %}">BACK HOME</a></p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .fs{
+        padding-top:30px;
+        padding-left:590px;}
+        h2{
+        text-align:center;}
+    </style>
+</head>
+<body style="background-color:powderblue;">
+<h2><u>ADD PRODUCT</u></h2>
+<form method="post" class="fs">
+    {% csrf_token %}
+     {{f.as_p}}
+    <input type="submit" class="btn btn-success">
+    <br><br>
+    <a href="{% url 'home' %}">HOME</a>
+
+</form>
+
+</body>
+</html>
